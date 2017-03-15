@@ -14,7 +14,7 @@ class api {
 
     public function __construct() {
         $this->username = 'productadmin@n-able.com';
-        $this->password = '_Grootgehe1m';
+        $this->password = ''; // Removed for demonstration purposes
 
         $this->wsdl = 'https://rmm.cloudnet.services/dms2/services2/ServerEI2?wsdl';
         $this->soapClient = new Soapclient($this->wsdl, array(
