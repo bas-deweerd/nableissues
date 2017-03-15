@@ -138,7 +138,7 @@ class api {
             'settings' => array(
                 array('key' => 'email',         'value'=> 'testmail@mail.com'),
                 array('key' => 'password',      'value'=> 'p@sSw0rd'),
-                array('key' => 'customerID',    'value'=> '158'), //TEST CUSTOMER
+                array('key' => 'customerID',    'value'=> '158'), //Existing site in server
                 array('key' => 'firstname',     'value'=> 'firstname'),
                 array('key' => 'lastname',      'value'=> 'lastname'),
                 array('key' => 'type',          'value'=> 'Admin')
