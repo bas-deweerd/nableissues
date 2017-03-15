@@ -118,4 +118,33 @@ class api {
         $this->soapClient->userAdd($params);
     }
     
+    /**
+     * Works on a server with build V10 instead of V11
+     */
+        public function addUserTest(){
+        $username2 = 'bas.de.weerd@copaco.com';
+        $password2 = ''; // Removed for demonstration purposes
+
+        $wsdl2 = 'https://ncentral.weritech.nl/dms2/services2/ServerEI2?wsdl';
+        $soapClient2 = new Soapclient($wsdl2, array(
+            'soap_version' => SOAP_1_2,
+            'trace' => TRUE
+            )
+        );
+        
+        $params = array(
+            'username' => $username2,
+            'password' => $password2,
+            'settings' => array(
+                array('key' => 'email',         'value'=> 'testmail@mail.com'),
+                array('key' => 'password',      'value'=> 'p@sSw0rd'),
+                array('key' => 'customerID',    'value'=> '158'), //TEST CUSTOMER
+                array('key' => 'firstname',     'value'=> 'firstname'),
+                array('key' => 'lastname',      'value'=> 'lastname'),
+                array('key' => 'type',          'value'=> 'Admin')
+            )
+        );
+        $soapClient2->userAdd($params);
+    }
+    
 }
